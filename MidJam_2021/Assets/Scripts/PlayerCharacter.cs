@@ -39,8 +39,19 @@ public class PlayerCharacter : MonoBehaviour
         //Movement Jump
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+            if(canJump == true)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+                canJump = false; //player can't jump again
+            }
+
         }
     }
-   
+
+     void OnCollisionStay(Collision collision)
+    {
+        //When player is on the ground, player can jump again
+        canJump = true;
+    }
+
 }
