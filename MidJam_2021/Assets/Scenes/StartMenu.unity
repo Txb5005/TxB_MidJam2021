@@ -773,7 +773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 1500, y: 400}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2110416107
@@ -798,18 +798,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 62d8ef49ed96236468b2d8edbcb2317e, type: 3}
-    m_FontSize: 155
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 160
+    m_MinSize: 0
+    m_MaxSize: 200
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Gingerbread-Me-Up Extravaganza!
+  m_Text: Cookie Crumble!
 --- !u!222 &2110416108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -914,9 +914,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3680221948357065228, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680221948357065228, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1163006790}
+    - target: {fileID: 3680221948357065228, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
 --- !u!1001 &6488070593471448299
