@@ -8,12 +8,13 @@ public class AI_GingerBread : MonoBehaviour
     public float speedDecreaseRate; //This should be between the range of (.1 -> .3)
     float minSpeed = 2.0f;
 
-    public GameObject target; // This is an empty gameobject placed at the end of the game/level
+    GameObject target; // This is an empty gameobject placed at the end of the game/level
 
     NavMeshAgent gingerbreadAI;
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Target");
         gingerbreadAI = GetComponent<NavMeshAgent>(); // Reference to the NavmeshAgent on this object
         StartCoroutine("slowlyDecreaseSpeed", .25f); // Run the decrease speed function every .25 seconds
     }
@@ -43,7 +44,6 @@ public class AI_GingerBread : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
-        //Instantiate "crumbs" Particle Effect
     }
 
     IEnumerator slowlyDecreaseSpeed(float waitTime) // This function subtracts from the speed of the agent based on the specified wait time
