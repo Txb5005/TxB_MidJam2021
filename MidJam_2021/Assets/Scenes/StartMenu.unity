@@ -310,6 +310,18 @@ PrefabInstance:
       value: 0.2830189
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.23300104
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.28013662
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.6415094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -829,6 +841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2204403743952812812, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2204403743952813296, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -913,6 +929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2204403745081244410, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680221948357065228, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
@@ -939,48 +959,12 @@ PrefabInstance:
       value: Play Button
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 0.04013884
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 0.20754719
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 0.12782893
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1163006790}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene_Manager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Metric
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 4580263040168772986, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
