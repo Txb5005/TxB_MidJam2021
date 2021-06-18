@@ -16,22 +16,26 @@ public class PlayerCharacter : MonoBehaviour
 
     [Header("Assigned Objects")]
     public Rigidbody rb;
+    public MeshRenderer mesh;
+    public GameObject losescreen;
+
 
     [Header("Bools")]
     public bool canJump;
+    public bool isInvulnerable;
 
     public void Start()
     {
- 
+        rb = GetComponent<Rigidbody>();
+        mesh = GetComponent<MeshRenderer>();
     }
     public void Update()
     {
-        slowdowntimer += Time.deltaTime;
 
         //player is always moving foward
         rb.velocity = new Vector3(currentSpeed, rb.velocity.y, rb.velocity.z);
 
-        if(slowdowntimer >= waitTime)
+        if (slowdowntimer >= waitTime)
         {
             currentSpeed -= 1f; //when slowdowntimer is greater than waittime decrease the current speed
             if (currentSpeed <= minSpeed)
@@ -41,7 +45,7 @@ public class PlayerCharacter : MonoBehaviour
             slowdowntimer -= waitTime;
         }
 
-        if(currentSpeed >= maxSpeed)
+        if (currentSpeed >= maxSpeed)
         {
             currentSpeed = maxSpeed; // if current speed is greater than max set current speed to max speed
         }
@@ -61,7 +65,7 @@ public class PlayerCharacter : MonoBehaviour
         //}
 
         //Movement Left
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, currentSpeed);
         }
@@ -73,7 +77,7 @@ public class PlayerCharacter : MonoBehaviour
         //Movement Jump
         if (Input.GetKey(KeyCode.Space))
         {
-            if(canJump == true)
+            if (canJump == true)
             {
                 rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
                 canJump = false; //player can't jump again
@@ -86,7 +90,81 @@ public class PlayerCharacter : MonoBehaviour
     {
         currentSpeed += 1f;
     }
-     void OnCollisionStay(Collision collision)
+
+    public void DecreaseSpeed()
+    {
+        currentSpeed -= 1f;
+    }
+
+    public void Death()
+    {
+
+    }
+
+    public void ToggleMesh()
+    {
+        if (mesh.enabled == true)
+        {
+            mesh.enabled = false;
+        }
+        else
+        {
+            mesh.enabled = true;
+        }
+    }
+
+    public void ToggleInvulnerable()
+    {
+        isInvulnerable = true;
+
+        if (isInvulnerable == true) // if bool is true start the coroutine for the "flash" timer is set for .25 seconds
+        {
+            StartCoroutine("startInvulnerable", .25f);
+            
+        }
+    }
+
+    IEnumerator startInvulnerable(float meshTimer)
+    {
+        while (isInvulnerable == true) // while the bool is true will "flash" the player character for a total of 3 seconds then stop
+        {
+
+            //ToggleMesh();
+            //yield return new WaitForSeconds(.25f);
+            //ToggleMesh();
+            //yield return new WaitForSeconds(.25f);
+
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = true;
+            isInvulnerable = false;
+            StopCoroutine("startInvulnerable");
+
+        }
+    }
+    void OnCollisionStay(Collision collision)
     {
         //When player is on the ground, player can jump again
         canJump = true;
