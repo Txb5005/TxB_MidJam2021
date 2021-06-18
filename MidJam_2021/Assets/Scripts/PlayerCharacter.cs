@@ -28,6 +28,8 @@ public class PlayerCharacter : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         mesh = GetComponent<MeshRenderer>();
+        isInvulnerable = false;
+        StartCoroutine("slowlyDecreasePlayerSpeed", .35f);
     }
     public void Update()
     {
@@ -35,34 +37,15 @@ public class PlayerCharacter : MonoBehaviour
         //player is always moving foward
         rb.velocity = new Vector3(currentSpeed, rb.velocity.y, rb.velocity.z);
 
-        if (slowdowntimer >= waitTime)
+        if (currentSpeed <= minSpeed)
         {
-            currentSpeed -= 1f; //when slowdowntimer is greater than waittime decrease the current speed
-            if (currentSpeed <= minSpeed)
-            {
-                currentSpeed = minSpeed; //if current speed is lower than min speed set it to min speed
-            }
-            slowdowntimer -= waitTime;
+            currentSpeed = minSpeed; //if current speed is lower than min speed set it to min speed
         }
 
         if (currentSpeed >= maxSpeed)
         {
             currentSpeed = maxSpeed; // if current speed is greater than max set current speed to max speed
         }
-
-
-
-        ////Movement Foward
-        //if (Input.GetKey(KeyCode.W)) 
-        //{
-        //    rb.velocity = new Vector3(speed, rb.velocity.y, rb.velocity.z);
-        //}
-
-        //Movement Backward
-        //if (Input.GetKey(KeyCode.S))
-        //{
-        //    rb.velocity = new Vector3(-speed, 0);
-        //}
 
         //Movement Left
         if (Input.GetKey(KeyCode.A))
@@ -82,7 +65,6 @@ public class PlayerCharacter : MonoBehaviour
                 rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
                 canJump = false; //player can't jump again
             }
-
         }
     }
 
@@ -101,26 +83,33 @@ public class PlayerCharacter : MonoBehaviour
 
     }
 
-    public void ToggleMesh()
-    {
-        if (mesh.enabled == true)
-        {
-            mesh.enabled = false;
-        }
-        else
-        {
-            mesh.enabled = true;
-        }
-    }
-
     public void ToggleInvulnerable()
     {
         isInvulnerable = true;
+        // Play stumble animation
 
         if (isInvulnerable == true) // if bool is true start the coroutine for the "flash" timer is set for .25 seconds
         {
             StartCoroutine("startInvulnerable", .25f);
-            
+        }
+    }
+
+    public IEnumerator slowlyIncreasePlayerSpeed(float waitTime) // This function slowly increases the player speed over the specified time frame
+    {
+        while (isInvulnerable == true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            currentSpeed = currentSpeed + .5f;
+            Debug.Log("increasing player speed");
+        }
+    }
+
+    public IEnumerator slowlyDecreasePlayerSpeed(float waitTime) // This function slowly decreases the player speed over the specified wait time
+    {
+        while (isInvulnerable == false)
+        {
+            yield return new WaitForSeconds(waitTime);
+            currentSpeed = currentSpeed -= .05f;
         }
     }
 
@@ -128,12 +117,6 @@ public class PlayerCharacter : MonoBehaviour
     {
         while (isInvulnerable == true) // while the bool is true will "flash" the player character for a total of 3 seconds then stop
         {
-
-            //ToggleMesh();
-            //yield return new WaitForSeconds(.25f);
-            //ToggleMesh();
-            //yield return new WaitForSeconds(.25f);
-
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
@@ -161,7 +144,7 @@ public class PlayerCharacter : MonoBehaviour
             mesh.enabled = true;
             isInvulnerable = false;
             StopCoroutine("startInvulnerable");
-
+            StartCoroutine("slowlyDecreasePlayerSpeed", .35f);
         }
     }
     void OnCollisionStay(Collision collision)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollidableObject : MonoBehaviour
 {
     PlayerCharacter player;
+    float speedIncreaseRate;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,12 @@ public class CollidableObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        /*if (other == player && player.isInvulnerable)
+        if (other.gameObject.GetComponent<PlayerCharacter>() && player.isInvulnerable == false)
         {
-
-        }*/
+            Debug.Log("trigger entered");
+            player.ToggleInvulnerable();
+            player.currentSpeed -= 2;
+            player.StartCoroutine("slowlyIncreasePlayerSpeed", .25f);
+        }
     }
 }
