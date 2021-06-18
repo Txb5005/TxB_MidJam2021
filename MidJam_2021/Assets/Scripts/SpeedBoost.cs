@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpeedBoost : MonoBehaviour
 {
+    [Header("Assigned")]
+    public AudioSource audioSource;
     public PlayerCharacter player;
 
     // Start is called before the first frame update
@@ -14,10 +16,11 @@ public class SpeedBoost : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(player)
+        if(other.GetComponent<PlayerCharacter>())
         {
+            audioSource.Play();
             player.IncreaseSpeed();
-            Destroy(gameObject); //When player enters trigger call increase speed function in player character script and delete object after
+            Destroy(gameObject, .3f); //When player enters trigger call increase speed function in player character script and delete object after
         }
     }
 }

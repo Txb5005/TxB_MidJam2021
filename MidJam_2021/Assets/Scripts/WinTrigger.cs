@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowDownTrigger : MonoBehaviour
+public class WinTrigger : MonoBehaviour
 {
     [Header("Assigned")]
+    public GameObject winScreen;
     public PlayerCharacter player;
     public AudioSource audioSource;
 
@@ -17,8 +18,11 @@ public class SlowDownTrigger : MonoBehaviour
     {
         if(other.GetComponent<PlayerCharacter>())
         {
-            player.DecreaseSpeed();
+            //winscreen pop up
             audioSource.Play();
+            Time.timeScale = 0;
         }
     }
+
+
 }

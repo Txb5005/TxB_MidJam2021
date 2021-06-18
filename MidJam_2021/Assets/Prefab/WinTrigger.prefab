@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8817159114033059661
+--- !u!1 &7702347278233821928
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8817159114033059657}
-  - component: {fileID: 8817159114033059658}
-  - component: {fileID: 8817159114033059659}
-  - component: {fileID: 8817159114033059660}
-  - component: {fileID: 8817159114033059656}
-  - component: {fileID: 4330531708992674743}
+  - component: {fileID: 7702347278233821934}
+  - component: {fileID: 7702347278233821935}
+  - component: {fileID: 7702347278233821932}
+  - component: {fileID: 7702347278233821933}
+  - component: {fileID: 7702347278233821930}
+  - component: {fileID: 7702347278233821931}
   m_Layer: 0
-  m_Name: GumDrop
+  m_Name: WinTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8817159114033059657
+--- !u!4 &7702347278233821934
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817159114033059661}
+  m_GameObject: {fileID: 7702347278233821928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 41.7, y: 3.06, z: -0.06}
+  m_LocalScale: {x: 1, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8817159114033059658
+--- !u!33 &7702347278233821935
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817159114033059661}
+  m_GameObject: {fileID: 7702347278233821928}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8817159114033059659
+--- !u!23 &7702347278233821932
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817159114033059661}
+  m_GameObject: {fileID: 7702347278233821928}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2121b270669fcae4e9700141668e2352, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,45 +84,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8817159114033059660
+--- !u!65 &7702347278233821933
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817159114033059661}
+  m_GameObject: {fileID: 7702347278233821928}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8817159114033059656
+--- !u!114 &7702347278233821930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817159114033059661}
+  m_GameObject: {fileID: 7702347278233821928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5bccd76f393c2546a999071bafe7af7, type: 3}
+  m_Script: {fileID: 11500000, guid: aa3728847c709d842809cfe4dff81738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winScreen: {fileID: 0}
   player: {fileID: 0}
---- !u!82 &4330531708992674743
+  audioSource: {fileID: 7702347278233821931}
+--- !u!82 &7702347278233821931
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817159114033059661}
+  m_GameObject: {fileID: 7702347278233821928}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 48b6c134f3c73ff40be99ae2c47dedc1, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: a621523536f73bd48ad4574d781b4350, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
