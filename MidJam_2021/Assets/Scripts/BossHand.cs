@@ -42,7 +42,11 @@ public class BossHand : MonoBehaviour
         {
             // Death animation
             // Stop game play
-            // Lose Screen
+
+            if (true) // after death animation is fully complete
+            {
+                Scene_Manager.Instance.LoadScene("Lose");
+            }
         }
     }
 }
