@@ -24,7 +24,7 @@ public class CollidableObject : MonoBehaviour
         {
             Debug.Log("trigger entered");
             player.ToggleInvulnerable();
-            player.currentSpeed -= 2;
+            player.currentSpeed -= 3;
             player.StartCoroutine("slowlyIncreasePlayerSpeed", .25f);
         }
     }
