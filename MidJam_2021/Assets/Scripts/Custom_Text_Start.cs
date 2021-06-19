@@ -21,14 +21,6 @@ public class Custom_Text_Start : MonoBehaviour
     }
     void Shake()
     {
-        //if (text.transform.rotation.z > 0)
-        //{
-        //    RotateText(-5);
-        //}
-        //else
-        //{
-        //    RotateText(5);
-        //}
         float angle = Random.Range(minShakeAngle, maxShakeAngle);
         if (text.transform.rotation.z > 0)
         {

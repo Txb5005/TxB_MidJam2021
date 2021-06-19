@@ -180,17 +180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ba2506272b9a514ba4dddc483b3a01d, type: 3}
---- !u!114 &97135010 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7641936443172964833, guid: 4ba2506272b9a514ba4dddc483b3a01d, type: 3}
-  m_PrefabInstance: {fileID: 97135009}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82fd402178f7cc041918e58f7a2a7b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &278903376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,22 +187,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 97135010}
-    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene_Manager, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2204403743952812812, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_Name
       value: Pause Menu Canvas
@@ -301,14 +274,6 @@ PrefabInstance:
     - target: {fileID: 2204403743952813296, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3680221948357065228, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 97135010}
-    - target: {fileID: 3680221948357065228, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}

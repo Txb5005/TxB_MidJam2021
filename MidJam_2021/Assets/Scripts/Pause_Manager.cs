@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause_Manager : MonoBehaviour
 {
@@ -46,5 +47,18 @@ public class Pause_Manager : MonoBehaviour
     void Show(bool active)
     {
         transform.GetChild(0).gameObject.SetActive(active);
+    }
+    public void LoadScene(string scene)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(scene);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

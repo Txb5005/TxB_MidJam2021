@@ -46,4 +46,8 @@ public abstract class Custom_Button : MonoBehaviour
     {
 
     }
+    public void PlayButtonDownAudio()
+    {
+        Audio_Manager.Instance.PlayAudioClip("Button");
+    }
 }
