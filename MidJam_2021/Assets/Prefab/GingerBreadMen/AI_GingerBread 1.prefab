@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 318167806452404653}
   - component: {fileID: 318167806452404654}
   - component: {fileID: 318167806452404655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AI_GingerBread 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
