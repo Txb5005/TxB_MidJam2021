@@ -36,7 +36,7 @@ public class AISpawner : MonoBehaviour
 
     void Start()
     {
-        numGingerbread = Random.Range(1, 3);
+        numGingerbread = Random.Range(0, 2);
         playerT = GameObject.FindObjectOfType<PlayerCharacter>().transform;
         timer = new Timer("", true, timeBetweenSpawns, spawnGingerbread, true);
     }
