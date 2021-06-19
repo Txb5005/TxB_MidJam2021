@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8689e5fa7c16b2a48819dfe29a9bb73d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 44dbfb4ec9cc4e84897a4a2ef9641716, type: 2}
 --- !u!1 &11188789
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,11 +431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2118127232905834784, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_NavMeshLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2118127232905834784, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4249332185207386399, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_Name
@@ -443,11 +443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8698395457329245743, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_NavMeshLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8698395457329245743, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
@@ -1585,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2118127232905834784, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_NavMeshLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2118127232905834784, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1597,11 +1597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8698395457329245743, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_NavMeshLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8698395457329245743, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7d14c54dfacba41a4ce924189cf7f5, type: 3}
