@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public abstract class Custom_Button : MonoBehaviour
 {
@@ -49,5 +48,18 @@ public abstract class Custom_Button : MonoBehaviour
     public void PlayButtonDownAudio()
     {
         Audio_Manager.Instance.PlayAudioClip("Button");
+    }
+    public void LoadScene(string scene)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(scene);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

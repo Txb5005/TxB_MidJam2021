@@ -326,16 +326,24 @@ PrefabInstance:
       value: 0.6509434
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1163006790}
+      objectReference: {fileID: 474325267}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene_Manager, Assembly-CSharp
+      value: Custom_Button, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: StartMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
@@ -424,6 +432,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
   m_PrefabInstance: {fileID: 474325265}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &474325267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+  m_PrefabInstance: {fileID: 474325265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f04371952bf1854493ba56717da73a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &478960944
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,8 +596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae757b59e32c1b744ba7b9eefe7ebd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minShakeAngle: -5
-  maxShakeAngle: 5
+  minShakeAngle: -0.5
+  maxShakeAngle: 0.5
 --- !u!114 &1044438851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,17 +645,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044438848}
   m_CullTransparentMesh: 1
---- !u!114 &1163006790 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7641936443172964833, guid: 4ba2506272b9a514ba4dddc483b3a01d, type: 3}
-  m_PrefabInstance: {fileID: 7641936442146282151}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82fd402178f7cc041918e58f7a2a7b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1261188198
 GameObject:
   m_ObjectHideFlags: 0
