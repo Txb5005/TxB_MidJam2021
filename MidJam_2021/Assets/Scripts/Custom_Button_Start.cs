@@ -64,7 +64,8 @@ public class Custom_Button_Start : Custom_Button
     {
         if (FindTimer(shakeTimer) == null)
         {
-            timers.Add(new Timer(shakeTimer, true, .333f, Shake, true));
+            buttonText.fontStyle = FontStyle.Bold;
+            timers.Add(new Timer(shakeTimer, true, .3f, Shake, true));
         }
     }
     void Shake()
@@ -84,10 +85,11 @@ public class Custom_Button_Start : Custom_Button
     }
     void StopShake()
     {
-        RotateText(0);
-        while (RemoveTimer(shakeTimer))
+        if (RemoveTimer(shakeTimer))
         {
+            RotateText(0);
 
+            buttonText.fontStyle = FontStyle.Normal;
         }
     }
 }
