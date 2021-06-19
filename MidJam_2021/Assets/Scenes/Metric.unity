@@ -191,17 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82fd402178f7cc041918e58f7a2a7b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &183758953 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4085055811852870197, guid: 1f0e01be775b4ae429cb0a083fe48e5f, type: 3}
-  m_PrefabInstance: {fileID: 4085055811763655260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67c9415c51effe4438aded39f78055b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &278903376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,6 +198,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 97135010}
+    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118162263103627348, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Scene_Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2204403743952812812, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_Name
       value: Pause Menu Canvas
@@ -223,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2204403743952813296, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2204403743952813296, guid: a1967fde196f0e94598d5bdf762582c2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -371,7 +376,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &931127156
 GameObject:
@@ -496,23 +501,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1154238117 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4085055813812197918, guid: 1f0e01be775b4ae429cb0a083fe48e5f, type: 3}
-  m_PrefabInstance: {fileID: 4085055811763655260}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1154238121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154238117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a18921dd8e745f409f3f32343ce6e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1623064077 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4330531708992674743, guid: a92d5963c7373a2459a2f7ee34cb8abc, type: 3}
@@ -935,7 +923,7 @@ PrefabInstance:
     - target: {fileID: 6260695767571775969, guid: 5a31c855b8cd42a4c8428305bb771213, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 183758953}
+      objectReference: {fileID: 0}
     - target: {fileID: 6260695767571775981, guid: 5a31c855b8cd42a4c8428305bb771213, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1053,7 +1041,7 @@ PrefabInstance:
     - target: {fileID: 8817159114033059656, guid: a92d5963c7373a2459a2f7ee34cb8abc, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 183758953}
+      objectReference: {fileID: 0}
     - target: {fileID: 8817159114033059656, guid: a92d5963c7373a2459a2f7ee34cb8abc, type: 3}
       propertyPath: audioSource
       value: 
