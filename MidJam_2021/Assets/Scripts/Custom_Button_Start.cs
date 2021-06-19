@@ -6,6 +6,8 @@ public class Custom_Button_Start : Custom_Button
 {
     List<Timer> timers = new List<Timer>();
     string shakeTimer = "shakeTimer";
+    [SerializeField] float minShakeAngle;
+    [SerializeField] float maxShakeAngle;
 
     void Update()
     {
@@ -72,11 +74,11 @@ public class Custom_Button_Start : Custom_Button
     {
         if (buttonText.transform.rotation.z > 0)
         {
-            RotateText(-10);
+            RotateText(minShakeAngle);
         }
         else
         {
-            RotateText(10);
+            RotateText(maxShakeAngle);
         }
     }
     void RotateText(float zAngle)

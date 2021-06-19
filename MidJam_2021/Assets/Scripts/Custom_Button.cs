@@ -12,7 +12,7 @@ public abstract class Custom_Button : MonoBehaviour
 	{
         if (customShape)
         {
-            GetComponent<Image>().alphaHitTestMinimumThreshold = 0.25f;
+            GetComponent<Image>().alphaHitTestMinimumThreshold = .25f;
         }
 
         buttonText = transform.GetChild(0).GetComponent<Text>();
