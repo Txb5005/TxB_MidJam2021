@@ -100,7 +100,6 @@ public class PlayerCharacter : MonoBehaviour
         {
             yield return new WaitForSeconds(waitTime);
             currentSpeed = currentSpeed + .5f;
-            Debug.Log("increasing player speed");
         }
     }
 

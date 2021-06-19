@@ -22,7 +22,6 @@ public class CollidableObject : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerCharacter>() && player.isInvulnerable == false)
         {
-            Debug.Log("trigger entered");
             player.ToggleInvulnerable();
             player.currentSpeed -= 3;
             player.StartCoroutine("slowlyIncreasePlayerSpeed", .25f);
