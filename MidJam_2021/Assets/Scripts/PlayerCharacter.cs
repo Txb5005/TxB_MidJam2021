@@ -90,7 +90,7 @@ public class PlayerCharacter : MonoBehaviour
 
         if (isInvulnerable == true) // if bool is true start the coroutine for the "flash" timer is set for .25 seconds
         {
-            StartCoroutine("startInvulnerable", .25f);
+            StartCoroutine("startInvulnerable", .15f);
         }
     }
 
@@ -119,37 +119,56 @@ public class PlayerCharacter : MonoBehaviour
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
-            yield return new WaitForSeconds(meshTimer);
+            yield return new WaitForSeconds(meshTimer); //2
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
-            yield return new WaitForSeconds(meshTimer);
+            yield return new WaitForSeconds(meshTimer); //4
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
-            yield return new WaitForSeconds(meshTimer);
+            yield return new WaitForSeconds(meshTimer); //6
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
-            yield return new WaitForSeconds(meshTimer);
+            yield return new WaitForSeconds(meshTimer); //8
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
-            yield return new WaitForSeconds(meshTimer);
+            yield return new WaitForSeconds(meshTimer); //10
             mesh.enabled = true;
             yield return new WaitForSeconds(meshTimer);
             mesh.enabled = false;
-            yield return new WaitForSeconds(meshTimer);
+            yield return new WaitForSeconds(meshTimer); //12
             mesh.enabled = true;
+
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer); //14
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer); //16
+            mesh.enabled = true;
+
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer); //18
+            mesh.enabled = true;
+            yield return new WaitForSeconds(meshTimer);
+            mesh.enabled = false;
+            yield return new WaitForSeconds(meshTimer); //20
+            mesh.enabled = true;
+
             isInvulnerable = false;
             StopCoroutine("startInvulnerable");
             StartCoroutine("slowlyDecreasePlayerSpeed", .35f);
         }
     }
-    void OnCollisionStay(Collision collision)
-    {
-        //When player is on the ground, player can jump again
-        canJump = true;
-    }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    //When player is on the ground, player can jump again
+    //    canJump = true;
+    //}
 
 }
