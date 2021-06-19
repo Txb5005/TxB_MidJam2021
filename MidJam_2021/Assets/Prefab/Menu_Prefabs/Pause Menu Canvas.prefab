@@ -698,6 +698,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Pause_Manager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: TravTestScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
