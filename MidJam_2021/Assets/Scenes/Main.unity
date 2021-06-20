@@ -2945,6 +2945,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 683720900}
     m_Modifications:
+    - target: {fileID: 643812330251098780, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997511057607806469, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2292749324408131286, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2992,6 +3000,38 @@ PrefabInstance:
     - target: {fileID: 2292749324408131305, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
       propertyPath: m_Name
       value: BossHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570754706127482831, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133502991724183735, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274674417175370704, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683659173003341037, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612891034589076123, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884994279051052001, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856523529647357590, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924959732579497596, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b198deaf894c9a34e9b0cfb3d7b8b199, type: 3}
@@ -3250,6 +3290,10 @@ PrefabInstance:
     - target: {fileID: 7641679749384199975, guid: 1f0e01be775b4ae429cb0a083fe48e5f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641679749384199981, guid: 1f0e01be775b4ae429cb0a083fe48e5f, type: 3}
+      propertyPath: turnSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0e01be775b4ae429cb0a083fe48e5f, type: 3}
