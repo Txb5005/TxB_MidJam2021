@@ -16,13 +16,6 @@ public abstract class Custom_Button : MonoBehaviour
 
         buttonText = transform.GetChild(0).GetComponent<Text>();
     }
-    protected virtual void Start()
-    {
-        if (Random.Range(0, 2) > 0)
-        {
-            buttonText.transform.localRotation = Quaternion.Euler(0, 0, 1);
-        }
-    }
     protected virtual void OnMouseOver()
     {
 
@@ -53,7 +46,7 @@ public abstract class Custom_Button : MonoBehaviour
     }
     public void PlayButtonDownAudio()
     {
-        Audio_Manager.Instance.PlayAudioClip("Button");
+        Audio_Manager.Instance.PlayUIAudio("Button");
     }
     public void LoadScene(string scene)
     {

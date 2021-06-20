@@ -567,15 +567,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.116767526
+      value: 0.097588114
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.49060154
+      value: 0.39067358
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.6037736
+      value: 0.4811321
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1159,10 +1159,10 @@ PrefabInstance:
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1747490079}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1170,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Controls
+      value: Settings
       objectReference: {fileID: 0}
     - target: {fileID: 4580263040168772986, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1267,6 +1267,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
   m_PrefabInstance: {fileID: 1747490077}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1747490079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+  m_PrefabInstance: {fileID: 1747490077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f04371952bf1854493ba56717da73a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1827223585
 PrefabInstance:
   m_ObjectHideFlags: 0

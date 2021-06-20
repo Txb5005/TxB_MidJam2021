@@ -12,15 +12,25 @@ public class Pause_Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!paused)
-            {
-                paused = true;
-                Show(true);
-                PauseMode();
-            }
+            Pause();
         }
+#if UNITY_EDITOR // for testing without losing mouse due to Unity's IDE
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Pause();
+        }
+#endif
     }
 
+    void Pause()
+    {
+        if (!paused)
+        {
+            paused = true;
+            Show(true);
+            PauseMode();
+        }
+    }
     public void Resume()
     {
         paused = false;

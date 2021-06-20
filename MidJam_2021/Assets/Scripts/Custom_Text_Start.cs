@@ -14,6 +14,11 @@ public class Custom_Text_Start : MonoBehaviour
     {
         text = GetComponent<Text>();
         timer = new Timer("shakeTimer", true, .5f, Shake, true);
+
+        if (Random.Range(0, 2) > 0)
+        {
+            text.transform.localRotation = Quaternion.Euler(0, 0, 1);
+        }
     }
     void Update()
     {
