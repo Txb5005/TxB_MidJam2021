@@ -69,6 +69,14 @@ public class BossHand : MonoBehaviour
                 Scene_Manager.Instance.LoadScene("Lose");
             }
         }
+
+        if (other.gameObject.tag == "gbHouse")
+        {
+            Destroy(other.gameObject);
+            cookieParticleSystem.Play();
+            StartCoroutine(cam.Shake(.3f, .25f));
+            Munch();
+        }
     }
 
     void GingerbreadManScream()

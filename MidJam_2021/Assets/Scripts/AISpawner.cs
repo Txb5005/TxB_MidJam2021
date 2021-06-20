@@ -27,7 +27,6 @@ public class AISpawner : MonoBehaviour
         {
             if (Distance <= 15)
             {
-                Debug.Log("range entered");
                 return true;
             }
             return false;
@@ -63,7 +62,6 @@ public class AISpawner : MonoBehaviour
         {
             Instantiate(gingerbreadAI[Random.Range(0, gingerbreadAI.Length)], spawnPoint);
             currentNumGingerbread++;
-            Debug.Log("spawned gingerbread");
         }
         else
         {
