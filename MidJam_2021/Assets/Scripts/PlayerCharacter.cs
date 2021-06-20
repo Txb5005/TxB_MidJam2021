@@ -7,17 +7,20 @@ public class PlayerCharacter : MonoBehaviour
     [Header("Stats")]
     public float maxSpeed = 10;
     public float currentSpeed = 5;
+    public float turnSpeed = 3;
     public float minSpeed = 5;
     public float jumpHeight = 5;
 
     [Header("Timers")]
+    public float animTimer;
     public float waitTime = 5;
     public float slowdowntimer;
 
     [Header("Assigned Objects")]
     public Rigidbody rb;
-    public MeshRenderer mesh;
+    public GameObject mesh;
     public GameObject losescreen;
+    public Animator anim;
 
 
     [Header("Bools")]
@@ -27,7 +30,7 @@ public class PlayerCharacter : MonoBehaviour
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
-        mesh = GetComponent<MeshRenderer>();
+        //mesh = GetComponent<MeshRenderer>();
         isInvulnerable = false;
         StartCoroutine("slowlyDecreasePlayerSpeed", .35f);
     }
@@ -36,6 +39,7 @@ public class PlayerCharacter : MonoBehaviour
 
         //player is always moving foward
         rb.velocity = new Vector3(currentSpeed, rb.velocity.y, rb.velocity.z);
+        anim.SetBool("IsRun", true);
 
         if (currentSpeed <= minSpeed)
         {
@@ -50,22 +54,30 @@ public class PlayerCharacter : MonoBehaviour
         //Movement Left
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, currentSpeed);
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, turnSpeed);
         }
         //Movement Right
         if (Input.GetKey(KeyCode.D))
         {
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, -currentSpeed);
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, -turnSpeed);
         }
         //Movement Jump
         if (Input.GetKey(KeyCode.Space))
         {
             if (canJump == true)
             {
+                anim.SetBool("IsJump", true);
+                animTimer = .5f;
                 rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
                 canJump = false; //player can't jump again
             }
         }
+
+        if(animTimer <= 0)
+        {
+            anim.SetBool("IsJump", false);
+        }
+        animTimer -= Time.deltaTime;
     }
 
     public void IncreaseSpeed()
@@ -116,49 +128,49 @@ public class PlayerCharacter : MonoBehaviour
     {
         while (isInvulnerable == true) // while the bool is true will "flash" the player character for a total of 3 seconds then stop
         {
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //2
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //4
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //6
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //8
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //10
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //12
-            mesh.enabled = true;
+            mesh.SetActive(true);
 
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //14
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //16
-            mesh.enabled = true;
+            mesh.SetActive(true);
 
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //18
-            mesh.enabled = true;
+            mesh.SetActive(true);
             yield return new WaitForSeconds(meshTimer);
-            mesh.enabled = false;
+            mesh.SetActive(false);
             yield return new WaitForSeconds(meshTimer); //20
-            mesh.enabled = true;
+            mesh.SetActive(true);
 
             isInvulnerable = false;
             StopCoroutine("startInvulnerable");
