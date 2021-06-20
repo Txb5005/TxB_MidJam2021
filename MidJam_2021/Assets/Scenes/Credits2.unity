@@ -641,20 +641,23 @@ MonoBehaviour:
     m_LineSpacing: 1.67
   m_Text: 'Mixamo - Animations
 
-    https://westarmusic.sourceaudio.com/#!explorer
-    - Music
+    https://fonts.google.com/specimen/Kirang+Haerang?category=Display#standard-styles
+    - Font
 
-    https://soundideas.sourceaudio.com/#!explorer - SFX
+    https://westarmusic.sourceaudio.com/#!explorer - Music
 
-    https://freesound.org/people/mrickey13/sounds/515621/
+    https://soundideas.sourceaudio.com/#!explorer
     - SFX
 
-    https://freesound.org/people/NachtmahrTV/sounds/553241/ - SFX
+    https://freesound.org/people/mrickey13/sounds/515621/ - SFX
 
-    https://freesound.org/people/InspectorJ/sounds/484267/
-    -SFX
+    https://freesound.org/people/NachtmahrTV/sounds/553241/
+    - SFX
 
-    https://freesound.org/people/cabled_mess/sounds/350869/ - SFX
+    https://freesound.org/people/InspectorJ/sounds/484267/ -SFX
+
+    https://freesound.org/people/cabled_mess/sounds/350869/
+    - SFX
 
 '
 --- !u!222 &1044438852

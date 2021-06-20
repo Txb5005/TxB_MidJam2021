@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinTrigger : MonoBehaviour
 {
     [Header("Assigned")]
-    public GameObject winScreen;
     public PlayerCharacter player;
     public AudioSource audioSource;
+
 
     public void Start()
     {
@@ -18,7 +19,7 @@ public class WinTrigger : MonoBehaviour
     {
         if(other.GetComponent<PlayerCharacter>())
         {
-            //winscreen pop up
+            Scene_Manager.Instance.LoadScene("Win");
             audioSource.Play();
             Time.timeScale = 0;
         }
