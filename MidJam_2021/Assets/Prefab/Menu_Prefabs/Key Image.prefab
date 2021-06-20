@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 1869072069154589431}
   - component: {fileID: 5229287248754613953}
   - component: {fileID: 7038334352413755133}
+  - component: {fileID: 1860468088826528364}
   m_Layer: 5
   m_Name: Letter Text
   m_TagString: Untagged
@@ -156,6 +157,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: A
+--- !u!114 &1860468088826528364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778012900384979369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae757b59e32c1b744ba7b9eefe7ebd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minShakeAngle: -1
+  maxShakeAngle: 1
 --- !u!1 &6885648992282196448
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +182,7 @@ GameObject:
   - component: {fileID: 5862057559645415538}
   - component: {fileID: 1531248375043351481}
   - component: {fileID: 4698087559995541650}
+  - component: {fileID: 6386678082865212022}
   m_Layer: 5
   m_Name: Description Text
   m_TagString: Untagged
@@ -235,3 +251,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Go Left
+--- !u!114 &6386678082865212022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885648992282196448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae757b59e32c1b744ba7b9eefe7ebd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minShakeAngle: -2
+  maxShakeAngle: 2

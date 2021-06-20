@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 2204403744886839632}
   - component: {fileID: 2204403744886839638}
   - component: {fileID: 2204403744886839633}
+  - component: {fileID: 935515815195916141}
   m_Layer: 5
   m_Name: Title Text
   m_TagString: Untagged
@@ -429,6 +430,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Paused
+--- !u!114 &935515815195916141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204403744886839635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae757b59e32c1b744ba7b9eefe7ebd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minShakeAngle: -2
+  maxShakeAngle: 2
 --- !u!1 &2204403745081244410
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +493,7 @@ GameObject:
   - component: {fileID: 6378545165391705075}
   - component: {fileID: 7558280543905978213}
   - component: {fileID: 405255248097185899}
+  - component: {fileID: 8040725113677949877}
   m_Layer: 5
   m_Name: Title Text
   m_TagString: Untagged
@@ -546,6 +562,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Controls
+--- !u!114 &8040725113677949877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7051785406264774955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae757b59e32c1b744ba7b9eefe7ebd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minShakeAngle: -2
+  maxShakeAngle: 2
 --- !u!1001 &29959776888515656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,6 +744,14 @@ PrefabInstance:
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
@@ -947,6 +985,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Pause_Manager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1092,6 +1138,14 @@ PrefabInstance:
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StartMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
@@ -1249,6 +1303,14 @@ PrefabInstance:
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
@@ -1504,6 +1566,14 @@ PrefabInstance:
     - target: {fileID: 3280128903453829885, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Pause_Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x

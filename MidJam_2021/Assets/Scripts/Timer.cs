@@ -131,7 +131,7 @@ public class Timer
     {
         if (on)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             if (elapsedTime >= time)
             {
                 InvokeAction();

@@ -341,6 +341,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StartMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -832,6 +840,14 @@ PrefabInstance:
     - target: {fileID: 4580263040168772986, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: maxShakeAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231777832798989884, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
+      propertyPath: minShakeAngle
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6484694648322682717, guid: 471faa5caaba59b4ab24fe1066a7e429, type: 3}
       propertyPath: m_Pivot.x
