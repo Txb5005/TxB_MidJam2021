@@ -10,6 +10,8 @@ public class BossHand : MonoBehaviour
     PlayerCharacter player;
     List<AudioSource> gingerbreadMenAudioSources = new List<AudioSource>();
     [SerializeField] List<AudioClip> gingerbreadMenAudioClips = new List<AudioClip>();
+    List<AudioSource> munchingAudioSources = new List<AudioSource>();
+    [SerializeField] List<AudioClip> munchingAudioClips = new List<AudioClip>();
     ParticleSystem cookieParticleSystem;
 
     void Start()
@@ -26,6 +28,15 @@ public class BossHand : MonoBehaviour
                 gingerbreadMenAudioSources.Add(ass);
             }
         }
+        t = GameObject.Find("Munching Audio").transform;
+        for (int i = 0; i < t.childCount; i++)
+        {
+            AudioSource ass = t.GetChild(i).GetComponent<AudioSource>();
+            if (ass)
+            {
+                munchingAudioSources.Add(ass);
+            }
+        }
         cookieParticleSystem = GameObject.Find("Cookie Particle Effect").GetComponent<ParticleSystem>();
         currentSpeed = player.maxSpeed - .5f;
     }
@@ -40,6 +51,7 @@ public class BossHand : MonoBehaviour
         {
             other.gameObject.GetComponent<AI_GingerBread>().die(); // Kill Gingerbread
             // Possible Animation (Hand grabbing gingerbread)
+            Munch();
             GingerbreadManScream();
             cookieParticleSystem.Play();
             StartCoroutine(cam.Shake(.3f, .15f)); // Camera Shake function
@@ -67,6 +79,19 @@ public class BossHand : MonoBehaviour
             if (!item.isPlaying)
             {
                 item.clip = gingerbreadMenAudioClips[rand];
+                item.Play();
+                return;
+            }
+        }
+    }
+    void Munch()
+    {
+        int rand = Random.Range(0, munchingAudioClips.Count);
+        foreach (var item in munchingAudioSources)
+        {
+            if (!item.isPlaying)
+            {
+                item.clip = munchingAudioClips[rand];
                 item.Play();
                 return;
             }
