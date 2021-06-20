@@ -6,6 +6,7 @@ public class Audio_Manager : MonoBehaviour
 {
     AudioSource audioSource;
     [SerializeField] List<AudioClip> audioClips = new List<AudioClip>();
+    List<AudioSource> sfx = new List<AudioSource>();
 
     public static Audio_Manager Instance { get; private set; }
 
@@ -19,11 +20,16 @@ public class Audio_Manager : MonoBehaviour
         }
         else if (Instance != this)
         {
+            NewScene();
             Destroy(gameObject);
             return;
         }
     }
 
+    void NewScene()
+    {
+
+    }
     public void PlayAudioClip(string audioName)
     {
         foreach (var item in audioClips)
@@ -34,5 +40,9 @@ public class Audio_Manager : MonoBehaviour
                 audioSource.Play();
             }
         }
+    }
+    public void ChangeSFXVolume()
+    {
+
     }
 }
