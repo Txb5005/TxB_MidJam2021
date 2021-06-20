@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Target
   - Floor
+  - gbHouse
   layers:
   - Default
   - TransparentFX

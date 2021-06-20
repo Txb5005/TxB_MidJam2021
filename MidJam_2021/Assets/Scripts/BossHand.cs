@@ -72,9 +72,9 @@ public class BossHand : MonoBehaviour
 
         if (other.gameObject.tag == "gbHouse")
         {
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, .4f);
             cookieParticleSystem.Play();
-            StartCoroutine(cam.Shake(.3f, .25f));
+            StartCoroutine(cam.Shake(.4f, .25f));
             Munch();
         }
     }
