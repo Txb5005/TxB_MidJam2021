@@ -28,19 +28,16 @@ public class Pause_Manager : MonoBehaviour
     }
     public void MenuMode()
     {
-        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1;
     }
     public void PlayMode()
     {
-        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
     }
     public void PauseMode()
     {
-        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
     }
