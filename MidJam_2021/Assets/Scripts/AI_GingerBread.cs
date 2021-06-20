@@ -11,9 +11,11 @@ public class AI_GingerBread : MonoBehaviour
     GameObject target; // This is an empty gameobject placed at the end of the game/level
 
     NavMeshAgent gingerbreadAI;
+    public Animator anim;
 
     void Start()
     {
+        //anim = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Target");
         gingerbreadAI = GetComponent<NavMeshAgent>(); // Reference to the NavmeshAgent on this object
         StartCoroutine("slowlyDecreaseSpeed", .25f); // Run the decrease speed function every .25 seconds
@@ -23,7 +25,7 @@ public class AI_GingerBread : MonoBehaviour
     void Update()
     {
         moveToTarget();
-
+        anim.SetBool("IsRun", true);
         // This keeps the speed of the agent from dropping below "minSpeed"
         if (gingerbreadAI.speed < minSpeed)
         {

@@ -59,8 +59,8 @@ MonoBehaviour:
   gingerbreadAI:
   - {fileID: 318167806452404640, guid: 3020869af4b706144a524893511b6919, type: 3}
   - {fileID: 318167806452404640, guid: 907357ec2e484e343920c701143e58b8, type: 3}
-  - {fileID: 318167806452404640, guid: 23d3d0fcd3c04ac4487f78636518b1fc, type: 3}
-  - {fileID: 318167806452404640, guid: 2254f26788a1bff45a513081cc45e4cb, type: 3}
+  - {fileID: 318167806452404640, guid: d74af9520c5a9a44e88dcb7a7f1b5a63, type: 3}
+  - {fileID: 318167806452404640, guid: b1b91da63cb635d44affb594f23b1dfa, type: 3}
   spawnPoint: {fileID: 6902490015669739436}
   timeBetweenSpawns: 0.5
 --- !u!114 &6951855710247593138
