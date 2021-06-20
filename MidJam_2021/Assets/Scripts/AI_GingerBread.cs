@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AI_GingerBread : MonoBehaviour
 {
     public float speedDecreaseRate; //This should be between the range of (.1 -> .3)
-    float minSpeed = 2.0f;
+    public float minSpeed = 3.5f;
 
     GameObject target; // This is an empty gameobject placed at the end of the game/level
 
@@ -19,7 +19,7 @@ public class AI_GingerBread : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Target");
         gingerbreadAI = GetComponent<NavMeshAgent>(); // Reference to the NavmeshAgent on this object
         StartCoroutine("slowlyDecreaseSpeed", .25f); // Run the decrease speed function every .25 seconds
-        gingerbreadAI.speed = Random.Range(5, 8);
+        gingerbreadAI.speed = Random.Range(6, 9);
         anim.SetBool("IsRun", true);
     }
 
