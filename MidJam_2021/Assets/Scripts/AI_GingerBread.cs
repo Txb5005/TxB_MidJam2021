@@ -19,6 +19,7 @@ public class AI_GingerBread : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Target");
         gingerbreadAI = GetComponent<NavMeshAgent>(); // Reference to the NavmeshAgent on this object
         StartCoroutine("slowlyDecreaseSpeed", .25f); // Run the decrease speed function every .25 seconds
+        gingerbreadAI.speed = Random.Range(5, 8);
     }
 
     // Update is called once per frame

@@ -7,7 +7,7 @@ public class PlayerCharacter : MonoBehaviour
     [Header("Stats")]
     public float maxSpeed = 10;
     public float currentSpeed = 5;
-    public float turnSpeed = 4;
+    public float turnSpeed = 3;
     public float minSpeed = 5;
     public float jumpHeight = 5;
 
