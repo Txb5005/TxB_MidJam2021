@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 318167806452404654}
   - component: {fileID: 318167806452404655}
   m_Layer: 6
-  m_Name: AI_GingerBread 1
+  m_Name: AI_GingerBread 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed3ebfd540aaac4b8ea3a13346b5a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDecreaseRate: 0.3
+  speedDecreaseRate: 0.1
   anim: {fileID: 3148292133973368757}
 --- !u!95 &3148292133973368757
 Animator:
