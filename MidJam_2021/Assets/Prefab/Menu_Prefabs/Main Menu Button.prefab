@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customShape: 1
-  minShakeAngle: -5
-  maxShakeAngle: 5
+  minShakeAngle: 0
+  maxShakeAngle: 0
 --- !u!1 &8112365181319549878
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 62d8ef49ed96236468b2d8edbcb2317e, type: 3}
-    m_FontSize: 130
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

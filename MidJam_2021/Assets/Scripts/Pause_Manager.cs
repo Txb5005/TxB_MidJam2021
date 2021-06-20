@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Pause_Manager : MonoBehaviour
 {
     bool paused = false;
+    [SerializeField] GameObject controls;
 
     void Update()
     {
@@ -44,6 +45,10 @@ public class Pause_Manager : MonoBehaviour
     void Show(bool active)
     {
         transform.GetChild(0).gameObject.SetActive(active);
+    }
+    public void ShowControls(bool active)
+    {
+        controls.SetActive(active);
     }
     public void LoadScene(string scene)
     {
